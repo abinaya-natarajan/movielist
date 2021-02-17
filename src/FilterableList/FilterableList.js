@@ -37,9 +37,13 @@ class FilterableList extends React.Component {
   render() {
     return (
         <div className="filterableListContainer">
+          <p className="filterHeading">Genres</p>
            {
             this.props.filterOptions.map((option) => {
-              return <p><input type="checkbox" onChange={this.onCheckBoxChange} value={option} id={option}/><label for={option}>{option}</label></p>
+              return <p className="filterInput">
+                        <input type="checkbox" onChange={this.onCheckBoxChange} value={option} id={option}/>
+                          <label for={option} className="filterLabel">{option}</label>
+                      </p>
             })
           }
         </div>

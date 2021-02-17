@@ -9,7 +9,7 @@ function PromoTileWrapper(props) {
     <div className="promoTileWrapperContainer">
       {
         moviesList.map((movie) => {
-          return <PromoTile movie={movie} />
+          return <PromoTile movie={movie} /> 
         })
       }
     </div>

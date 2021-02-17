@@ -6,14 +6,14 @@ import './style.css';
 
 class LandingPage extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+
         this.state = {
             dataList: [],
             moviesList: [],
             filterOptions: []
         }
     }
-    
 
 
     componentDidMount() {
@@ -31,6 +31,8 @@ class LandingPage extends React.Component {
                 this.setState({dataList: result, moviesList: result, filterOptions: options});
             })
     }
+
+
 
      findCommonElement = (array1, array2) => { 
         for(let i = 0; i < array1.length; i++) { 
@@ -72,7 +74,7 @@ class LandingPage extends React.Component {
                 <SectionHeader title="Movie List"/>
                 <div className="landingPageContentWrapper">
                     <FilterableList filterOptions={filterOptions} handleCallBack={this.handleCallBack}/>
-                    <PromoTileWrapper  moviesList={moviesList} />
+                    <PromoTileWrapper  moviesList={moviesList} />  
                 </div>
             </div>
         );
