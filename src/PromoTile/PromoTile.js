@@ -3,7 +3,7 @@ import Image from '../Image/Image'
 import './style.css';
 
 function PromoTile(props) {
-  const { image, name} = props.movie;
+  const { image, name} = props;
 
   return (
     <div className="promoTileContainer">

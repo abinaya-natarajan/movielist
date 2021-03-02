@@ -1,0 +1,11 @@
+.searchBarContainer {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+.formContainer input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}

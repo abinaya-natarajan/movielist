@@ -3,7 +3,7 @@ import './style.css';
 
 class FilterableList extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
         filterOptionList: [],
         selectedOptions: []
@@ -38,11 +38,10 @@ class FilterableList extends React.Component {
     return (
         <div className="filterableListContainer">
           <p className="filterHeading">Genres</p>
-           {
-            this.props.filterOptions.map((option) => {
-              return <p className="filterInput">
-                        <input type="checkbox" onChange={this.onCheckBoxChange} value={option} id={option}/>
-                          <label for={option} className="filterLabel">{option}</label>
+           {this.props.filterOptions.map((option) => {
+              return <p className="filterInput" key={option}>
+                        <input type="checkbox" onChange={this.onCheckBoxChange} value={option} id={option} />
+                          <label htmlFor={option} className="filterLabel">{option}</label>
                       </p>
             })
           }
